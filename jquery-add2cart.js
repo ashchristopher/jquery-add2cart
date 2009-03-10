@@ -1,3 +1,8 @@
+// Original file: http://i1t2b3.com/2009/01/29/add2cart/
+// Modified by G.A.P Adventures
+//     - display the source picture instead of a shadow box.
+//     - z-index is now unset.
+
 (function($) {
     $.extend({
 	    add2cart: function(source_id, target_id, callback) {
@@ -17,17 +22,20 @@
       
             shadow.width(source.css('width')).height(source.css('height')).css('top', source.offset().top).css('left', source.offset().left).css('opacity', 0.5).show();
             shadow.css('position', 'absolute');
+            
             shadow.animate(
                 { top: target.offset().top, left: target.offset().left },
                 300,
                 'linear'
             ).animate(
                 { opacity: 0 },
-                { duration: 100, complete: callback },
-                'linear',
-                function() {
+                100,
+                function(){
                     shadow.hide();
                 }
+            ).animate(
+                { opacity: 0 },
+                { duration: 0, complete: callback }
             );
         }
     });
