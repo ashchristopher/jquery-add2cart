@@ -5,6 +5,10 @@ into another.
 This plugin is especially useful when a visual effect on shopping carts
 for eCommerce or related web applications.
 
+The fork of this plugin provides functionality that applies the source 
+image to the image being animated instead of a grey box that was found
+in the original plugin.
+
 Usage:
 
 $('#some_id).click(function(e) {
