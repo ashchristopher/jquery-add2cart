@@ -1,7 +1,3 @@
-// Original file: http://i1t2b3.com/2009/01/29/add2cart/
-// Modified by G.A.P Adventures
-//     - display the source picture instead of a shadow box.
-//     - z-index is now unset.
 
 (function($) {
     $.extend({
