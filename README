@@ -8,8 +8,10 @@ for eCommerce or related web applications.
 Usage:
 
 $('#some_id).click(function(e) {
-    $.add2cart('id_coverimage_' + id,'id_scroll_order', function(){});
+    $.add2cart('source','target', function(){});
 });
+
+*** Please note that 'source' and 'target' must be ids ***
 
 Origins:
 This jQuery plugin is a fork of Skakunov Alexander's jQuery Add2Cart plugin.
